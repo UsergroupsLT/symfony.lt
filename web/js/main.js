@@ -2,8 +2,8 @@
     "use strict";
 
     ///////////////////////////////////////////////////// Your
-    var coordinates = [54.656948, 24.982314];
-    var venueAddress = "Stovyklavietė \"Verubė\"<br>("
+    var coordinates = [54.7107699,25.2940479];
+    var venueAddress = "Šiaurės miestelio technologijų parkas,<br />J. Galvydžio g. 5, Vilnius ("
         + coordinates[0] + ', ' + coordinates[1] + ")"; // Venue
     /////////////////////////////////////////////////// Adress
 
@@ -172,8 +172,8 @@
                     return pattern.test(emailAddress);
                 }
 
-                var name = $('#estina_bundle_homebundle_talk_title').val(),
-                    email = $('#estina_bundle_homebundle_talk_email').val();
+                var name = $('#estina_bundle_homebundle_participant_participant').val(),
+                    email = $('#estina_bundle_homebundle_participant_email').val();
 
                 if (isValidEmail(email) && name.length > 1) {
                     $.ajax({
@@ -188,14 +188,14 @@
                     });
                 } else {
                     if (!isValidEmail(email)) {
-                        $('input#email').addClass('not-valid');
+                        $('#estina_bundle_homebundle_participant_email').addClass('not-valid');
                     } else {
-                        $('input#email').removeClass('not-valid');
+                        $('estina_bundle_homebundle_participant_email').removeClass('not-valid');
                     }
                     if (name.length === 0) {
-                        $('input#name').addClass('not-valid');
+                        $('#estina_bundle_homebundle_participant_participant').addClass('not-valid');
                     } else {
-                        $('input#name').removeClass('not-valid');
+                        $('#estina_bundle_homebundle_participant_participant').removeClass('not-valid');
                     }
                 }
                 return false;

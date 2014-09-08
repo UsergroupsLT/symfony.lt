@@ -6,8 +6,9 @@
         <div class="section-header text-center">
             <h2>Registracija</h2>
             <p>
-                <span class="label label-danger">DĖMĖSIO!</span> <strong>Registracija baigėsi Liepos 14 dieną!</strong><br>
-                Jei turite klausimų, rašykit <a href="mailto:hi@notrollsallowed.com">hi@notrollsallowed.com</a>.
+                <span class="label label-danger">DĖMĖSIO!</span> <strong>Vietų kiekis ribotas!</strong><br>
+                Todėl registruokitės, pateikdami savo patirtį, o atrinktus kandidatus informuosime asmeniškai.
+                Jei turite klausimų, rašykit <a href="mailto:hi@symfony.lt">hi@symfony.lt</a>.
             </p>
             {#
             <p><span class="label label-danger">DĖMĖSIO!</span> <strong>Registracija baigiasi Liepos 14 dieną!</strong></p>
@@ -16,17 +17,11 @@
             #}
         </div>
     </div>
-    {#
     <div class="col-sm-12">
         <form id="register-form" method="post" class="form" action="{{ path('register') }}">
-            <div class="col-md-6 col-sm-6">
-                {{ form_widget(form.title) }}
-            </div>
-            <div class="col-md-6 col-sm-6">
-                {{ form_widget(form.description) }}
-            </div>
+
             <div class="col-md-3 col-sm-6">
-                {{ form_widget(form.speaker) }}
+                {{ form_widget(form.participant) }}
             </div>
             <div class="col-md-3 col-sm-6">
                 {{ form_widget(form.email) }}
@@ -34,16 +29,24 @@
             <div class="col-md-3 col-sm-6">
                 {{ form_widget(form.phone) }}
             </div>
+            <div class="col-md-3 col-sm-6">
+                {{ form_widget(form.age) }}
+            </div>
+            <div class="col-md-6 col-sm-6">
+                {{ form_widget(form.description) }}
+            </div>
+            <div class="col-md-6 col-sm-6">
+                {{ form_widget(form.motivation) }}
+            </div>
             <div class="col-md-3 col-sm-12">
                 <input type="submit" value="Registruotis" name="submit">
             </div>
             <p class="form-notification" style="display: none;">
-            Registracija sėkminga!<br>Netrukus jūsų pranešimas bus patvirtintas.<br>
+            Registracija sėkminga!<br>
             <small>(patvirtinimo žinutė nėra siunčiama)</small>
             </p>
             {{ form_widget(form._token) }}
         </form>
     </div>
-    #}
 </section>
 <!--==========-->

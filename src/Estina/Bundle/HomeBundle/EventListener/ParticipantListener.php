@@ -3,12 +3,12 @@
 namespace Estina\Bundle\HomeBundle\EventListener;
 
 
-use Estina\Bundle\HomeBundle\Event\TalkEvent;
+use Estina\Bundle\HomeBundle\Event\ParticipantEvent;
 
 /**
- * TalkListener 
+ * ParticipantListener
  */
-class TalkListener
+class ParticipantListener
 {
     protected $mailer;
 
@@ -23,28 +23,28 @@ class TalkListener
      * 
      * @param GetResponseForExceptionEvent $event 
      */
-    public function onCreate(TalkEvent $event)
+    public function onCreate(ParticipantEvent $event)
     {
-        $talk = $event->getTalk();
+        $participant = $event->getParticipant();
 
         if (null === $this->adminEmail) {
             return;
         }
 
-        $subject = 'Registracija: ' . $talk->getSpeaker();
+        $subject = 'Registracija: ' . $participant->getParticipant();
         $body = <<<EOT
 ====================
-PRANEŠĖJAS
+DALYVIS
 ====================
-{$talk->getSpeaker()}
-{$talk->getEmail()}
-{$talk->getPhone()}
+{$participant->getParticipant()}
+{$participant->getEmail()}
+{$participant->getPhone()}
 
 ====================
 PRANEŠIMAS
 ====================
-{$talk->getTitle()}
-{$talk->getDescription()}
+{$participant->getMotivation()}
+{$participant->getDescription()}
 EOT;
 
         $message = \Swift_Message::newInstance()

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="lt">
 	<head prefix="og: http://ogp.me/ns#">
-		<title>No Trolls Allowed 2014</title>
+		<title>Symfony.lt</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -21,14 +21,13 @@
 		<link href="css/nta.css" rel="stylesheet" media="screen">
 
 		<!--== FB meta ==-->
-        <meta property="og:url" content="{{ url('home') }}">
-        <meta property="og:title" content="No Trolls Allowed 2014">
-        <meta property="og:description" content="Pirmas ir vienintelis hackercamp'as Lietuvoje! Po atviru dangumi vykstantis renginys, siekiantis suburti įvairių pomėgių turinčius žmones. Čia laukiami progamuotojai, įvairaus plauko geek'ai, mokslininkai, konstruktoriai, artistai, menininkai ir kitų sričių specialistai, galintys ir norintys pasidalinti savo žiniomis. Norite sudalyvauti? Pasiimkite savo šeimyną, maisto, gėrimų, bei palapinę viskam sutalpinti ir atvažiuokite!">
-        <meta property="og:image" content="{{ asset('images/troll-medium.png') }}"/>
+        <meta property="og:url" content="{{ url('home') }}" />
+        <meta property="og:title" content="Symfony.lt mokymai" />
+        <meta property="og:description" content="2014-10-11 Symfony.lt pradedančiųjų mokymai" />
+        <meta property="og:image" content="https://scontent-b.xx.fbcdn.net/hphotos-prn2/t1/224363_211720515516357_4598012_n.jpg"/>
         <meta property="og:image:type" content="image/png">
-        <meta property="og:image:width" content="310">
+        <meta property="og:image:width" content="300">
         <meta property="og:image:height" content="300">
-        <meta property="NTA0" content="4c 41 55 47 48 49 54 55 50 46 55 5a 5a 42 41 4c 4c">
 	</head>
 	<body>
 		<header id="header">
@@ -46,22 +45,18 @@
 
 								<!--== Logo ==-->
 								<span class="navbar-brand logo">
-									<img src="images/logo.png" alt=""> NTA 2014
+									<img src="http://www.symfony.com/images/v5/logos/header-logo.svg" alt="Symfony.lt">
 								</span>
 
 							</div>
 							<div class="navbar-collapse collapse">
-
 								<!--== Navigation Menu ==-->
 								<ul class="nav navbar-nav">
 									<li class="current"><a href="#header">Pradžia</a></li>
-									<li><a href="#schedule">Programa</a></li>
 									<li><a href="#faq">DUK</a></li>
 									<li><a href="#partners">Rėmėjai</a></li>
 									<li><a href="#register">Registracija</a></li>
-                                    <li><a href="#speakers">Pranešimai</a></li>
-									<li><a href="http://wiki.notrollsallowed.com/" class="external">Wiki</a></li>
-									<li><a href="http://2013.notrollsallowed.com/" class="external">NTA 2013</a></li>
+									<li><a href="#location">Kontaktai</a></li>
 								</ul>
 							</div>
 						</nav>
@@ -74,12 +69,12 @@
 				<div class="container">
 					<div class="row">
 						<div class="blk">
-							<h1>No Trolls Allowed 2014</h1>
+							<h1>Symfony pradedančiųjų mokymai</h1>
 						</div>
 					</div>
 					<div class="row">
 						<div class="blk">
-							<input type="submit" value="Registracija" name="submit" id="goregister">
+							<input type="submit" value="Užsiregistruok" name="submit" id="goregister">
 						</div>
 					</div>
 				</div>
@@ -93,13 +88,13 @@
 
 					<!--== Main Slider ==-->
 					<ul class="slides">
-						<li><img src="images/demo/bg-slide-01.jpg" alt=""/></li>
-						<li><img src="images/demo/bg-slide-02.jpg" alt=""/></li>
-						<li><img src="images/demo/bg-slide-03.jpg" alt=""/></li>
-						<li><img src="images/demo/bg-slide-04.jpg" alt=""/></li>
-						<li><img src="images/demo/bg-slide-05.jpg" alt=""/></li>
-						<li><img src="images/demo/bg-slide-06.jpg" alt=""/></li>
-						<li><img src="images/demo/bg-slide-07.jpg" alt=""/></li>
+						<li><img src="images/slides/1.jpg" alt=""/></li>
+						<li><img src="images/slides/2.jpg" alt=""/></li>
+						<li><img src="images/slides/3.jpg" alt=""/></li>
+						<li><img src="images/slides/4.jpg" alt=""/></li>
+						<li><img src="images/slides/5.jpg" alt=""/></li>
+						<li><img src="images/slides/6.jpg" alt=""/></li>
+						<li><img src="images/slides/7.jpg" alt=""/></li>
 					</ul>
 				</div>
 			</div>
@@ -114,20 +109,21 @@
 		<footer id="footer">
 			<div id="map_canvas"></div>
 
-			<div class="footer">
+			<div class="footer" id="location">
 				<div class="container box">
 
 					<section id="info" class="row">
 						<div class="col-sm-8">
 							<!--== Social Icons ==-->
 							<ul class="social-icons">
-								<li><a href="https://www.facebook.com/NoTrollsAllowed" class="fa fa-facebook"></a></li>
-								<li><a href="https://twitter.com/ntacamp" class="fa fa-twitter"></a></li>
+								<li><a href="https://www.facebook.com/groups/301802373270632/" class="fa fa-facebook"></a></li>
+								<li><a href="https://twitter.com/VilniusPHP" class="fa fa-twitter"></a></li>
 							</ul>
 						</div>
 						<div class="col-sm-4 text-right">
 							<div class="copyrights">
-                                Visos teisės saugomos. © {{ "now"|date("Y") }}
+                                Visos teisės saugomos. © {{ "now"|date("Y") }}<br/>
+                                Symfony prekės ženklas priklausantis Fabien Potencer.
 							</div>
 						</div>
 					</section>
@@ -150,19 +146,6 @@
 		<script src="js/gmap3.js"></script>
 		<script src="js/fancySelect.js"></script>
 		<script src="js/main.js"></script>
-
-        <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-41181062-1']);
-            _gaq.push(['_setDomainName', 'notrollsallowed.com']);
-            _gaq.push(['_trackPageview']);
-
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-        </script>
 
 	</body>
 </html>

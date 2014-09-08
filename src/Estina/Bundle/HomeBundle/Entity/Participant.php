@@ -5,13 +5,13 @@ namespace Estina\Bundle\HomeBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Talk
+ * Participant
  *
- * @ORM\Table(name="talk")
- * @ORM\Entity(repositoryClass="Estina\Bundle\HomeBundle\Entity\TalkRepository")
+ * @ORM\Entity()
+ * @ORM\Table(name="participant")
  * @ORM\HasLifecycleCallbacks
  */
-class Talk
+class Participant
 {
     /**
      * @var integer
@@ -25,16 +25,22 @@ class Talk
     /**
      * @var string
      *
-     * @ORM\Column(name="title", type="string", length=255)
+     * @ORM\Column(name="motivation", type="text")
      */
-    private $title;
+    private $motivation;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="speaker", type="string", length=255)
+     * @ORM\Column(name="participant", type="string", length=255)
      */
-    private $speaker;
+    private $participant;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="age", type="string", length=255)
+     */
+    private $age;
 
     /**
      * @var string
@@ -90,56 +96,42 @@ class Talk
     }
 
     /**
-     * Set title
-     *
-     * @param string $title
-     * @return Talk
+     * @param string $motivation
      */
-    public function setTitle($title)
+    public function setMotivation($motivation)
     {
-        $this->title = $title;
-
-        return $this;
+        $this->motivation = $motivation;
     }
 
     /**
-     * Get title
-     *
-     * @return string 
+     * @return string
      */
-    public function getTitle()
+    public function getMotivation()
     {
-        return $this->title;
+        return $this->motivation;
     }
 
     /**
-     * Set speaker
-     *
-     * @param string $speaker
-     * @return Talk
+     * @param string $participant
      */
-    public function setSpeaker($speaker)
+    public function setParticipant($participant)
     {
-        $this->speaker = $speaker;
-
-        return $this;
+        $this->participant = $participant;
     }
 
     /**
-     * Get speaker
-     *
-     * @return string 
+     * @return string
      */
-    public function getSpeaker()
+    public function getParticipant()
     {
-        return $this->speaker;
+        return $this->participant;
     }
 
     /**
      * Set email
      *
-     * @param string $email
-     * @return Talk
+     * @param $email
+     * @return $this
      */
     public function setEmail($email)
     {
@@ -160,9 +152,9 @@ class Talk
 
     /**
      * Set phone
-     *
-     * @param string $phone
-     * @return Talk
+     * 
+     * @param $phone
+     * @return $this
      */
     public function setPhone($phone)
     {
@@ -185,7 +177,7 @@ class Talk
      * Set description
      *
      * @param string $description
-     * @return Talk
+     * @return Participant
      */
     public function setDescription($description)
     {
@@ -205,10 +197,26 @@ class Talk
     }
 
     /**
+     * @param string $age
+     */
+    public function setAge($age)
+    {
+        $this->age = $age;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+    /**
      * Set createdOn
      *
      * @param \DateTime $createdOn
-     * @return Talk
+     * @return Participant
      */
     public function setCreatedOn($createdOn)
     {
@@ -231,7 +239,7 @@ class Talk
      * Set updatedAt
      *
      * @param \DateTime $updatedAt
-     * @return Talk
+     * @return Participant
      */
     public function setUpdatedAt($updatedAt)
     {
@@ -254,7 +262,7 @@ class Talk
      * Set active
      *
      * @param bool $active
-     * @return Talk
+     * @return Participant
      */
     public function setActive($active)
     {
