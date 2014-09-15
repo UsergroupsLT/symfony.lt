@@ -33,6 +33,9 @@ class ParticipantType extends AbstractType
             ->add('motivation', 'text', ['attr' => [
                 'placeholder' => 'Kodėl nori dalyvauti?'
             ]])
+            ->add('wishes', 'text', ['attr' => [
+                'placeholder' => 'Ką norėtum išmokti?'
+            ]])
         ;
     }
  

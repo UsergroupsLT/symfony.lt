@@ -8,8 +8,11 @@
             <p>
                 <br>
                 <span class="label label-danger">DĖMĖSIO!</span> <strong>Vietų kiekis ribotas!</strong><br>
-                Skubėkite registruotis, atrinktus dalyvius informuosime asmeniškai.
-                Jei turite klausimų, rašykit <a href="mailto:hi@symfony.lt">hi@symfony.lt</a>.
+                Skubėkite registruotis, atrinktus dalyvius informuosime
+                asmeniškai. Registracijos formoje kuo plačiau aprašykite savo
+                patirtį su PHP ir pageidavimus. Ši informacija padės mums
+                pritaikyti dirbtuves prie Jūsų poreikių. Jei turite klausimų,
+                rašykit <a href="mailto:hi@symfony.lt">hi@symfony.lt</a>.
             </p>
         </div>
     </div>
@@ -34,12 +37,15 @@
             <div class="col-md-6 col-sm-6">
                 {{ form_widget(form.motivation) }}
             </div>
+            <div class="col-md-6 col-sm-6">
+                {{ form_widget(form.wishes) }}
+            </div>
             <div class="col-md-3 col-sm-12">
                 <input type="submit" value="Registruotis" name="submit">
             </div>
             <p class="form-notification" style="display: none;">
             Registracija sėkminga!<br>
-            <small>(patvirtinimo žinutė nėra siunčiama)</small>
+            <small>Netrukus peržiūrėsim Jūsų registraciją ir atsiųsim patvirtinimą.</small>
             </p>
             {{ form_widget(form._token) }}
         </form>

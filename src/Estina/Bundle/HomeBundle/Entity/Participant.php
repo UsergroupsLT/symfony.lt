@@ -84,6 +84,13 @@ class Participant
      */
     private $active = 0;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="wishes", type="text")
+     */
+    private $wishes;
+
 
     /**
      * Get id
@@ -291,5 +298,29 @@ class Participant
         } else {
             $this->createdOn = new \DateTime;
         }
+    }
+
+    /**
+     * setWishes 
+     * 
+     * @param string $data 
+     *
+     * @return Participant
+     */
+    public function setWishes($data)
+    {
+        $this->wishes = $data;
+
+        return $this;
+    }
+
+    /**
+     * getWishes 
+     * 
+     * @return string
+     */
+    public function getWishes()
+    {
+        return $this->wishes;
     }
 }
