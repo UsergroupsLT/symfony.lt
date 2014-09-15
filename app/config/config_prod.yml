@@ -4,7 +4,7 @@ imports:
 framework:
     templating:
         assets_base_urls:
-            http: ['http://2014.notrollsallowed.com']
+            http: ['http://www.symfony.lt']
 #    validation:
 #        cache: apc
 
