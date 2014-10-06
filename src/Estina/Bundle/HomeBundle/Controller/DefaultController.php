@@ -75,6 +75,16 @@ class DefaultController extends Controller
     }
 
     /**
+     * Mentors block 
+     * 
+     * @Template()
+     */
+    public function mentorsAction()
+    {
+        return [];
+    }
+
+    /**
      * FAQ block 
      * 
      * @Template()
