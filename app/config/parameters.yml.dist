@@ -12,5 +12,5 @@ parameters:
     mailer_password:   ~
 
     locale:            lt
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    secret:            GaRuYxJHqpbsLfkQoQLE7VEiGRaojUFKXJTXGExw9fKeveKBmk
     admin_email:       ~
