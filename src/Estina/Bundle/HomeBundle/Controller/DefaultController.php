@@ -4,7 +4,6 @@ namespace Estina\Bundle\HomeBundle\Controller;
 
 use Estina\Bundle\HomeBundle\Form\ParticipantType;
 use Estina\Bundle\HomeBundle\Event\ParticipantEvent;
-use Estina\Bundle\HomeBundle\EventListener\ParticipantListener;
 use Estina\Bundle\HomeBundle\ParticipantEvents;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -31,6 +30,7 @@ class DefaultController extends Controller
      * @param Request $request 
      *
      * @Route("/register", name="register")
+     * @Method({"POST"})
      * @Template()
      */
     public function registerAction()
