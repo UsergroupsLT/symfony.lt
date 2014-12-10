@@ -2,8 +2,8 @@
     "use strict";
 
     ///////////////////////////////////////////////////// Your
-    var coordinates = [54.7107699,25.2940479];
-    var venueAddress = "Šiaurės miestelio technologijų parkas,<br />J. Galvydžio g. 5, Vilnius ("
+    var coordinates = [54.898164,23.886778];
+    var venueAddress = "Kolpingo kolegija,<br />A. Jakšto g. 6, Kaunas ("
         + coordinates[0] + ', ' + coordinates[1] + ")"; // Venue
     /////////////////////////////////////////////////// Adress
 

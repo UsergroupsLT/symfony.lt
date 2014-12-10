@@ -7,6 +7,7 @@ use Estina\Bundle\HomeBundle\Event\ParticipantEvent;
 use Estina\Bundle\HomeBundle\ParticipantEvents;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
