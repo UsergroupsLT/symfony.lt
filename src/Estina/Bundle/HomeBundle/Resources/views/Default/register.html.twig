@@ -43,12 +43,20 @@
             <div class="col-md-3 col-sm-12">
                 <input type="submit" value="Registruotis" name="submit">
             </div>
+            <div class="col-md-3 col-sm-12">
+                <small>* Vietų skaičius ribotas</small>
+            </div>
             <p class="form-notification" style="display: none;">
             Registracija sėkminga!<br>
-            <small>Netrukus peržiūrėsim Jūsų registraciją ir atsiųsim patvirtinimą.</small>
+            <small>Jūsų registracija bus peržiūrėta ir patvirtinimas atsiųstas iki sausio 12 d.</small>
             </p>
             {{ form_widget(form._token) }}
         </form>
+        <p class="muted">
+            <small>* Dėl riboto vietų skaičiaus pirmenybė teikiama norintiems pirmą kartą susipažinti su Symfony2 karkasu. 
+            <br>Ar buvote atrinkti dalyvauti mokymuose pranešime asmeniškai iki sausio 12 d.</small>
+        </p>
+
     </div>
 </section>
 <!--==========-->
