@@ -1,24 +1,23 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "usergroupslt/symfony.lt",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "The Symfony.LT website",
     "autoload": {
         "psr-0": { "": "src/" }
     },
     "require": {
-        "php": ">=5.3.3",
-        "symfony/symfony": "v2.5.6",
-        "doctrine/orm": "~2.2,>=2.2.3",
-        "doctrine/doctrine-bundle": "~1.2",
-        "twig/extensions": "~1.0",
-        "symfony/assetic-bundle": "~2.3",
-        "symfony/swiftmailer-bundle": "~2.3",
-        "symfony/monolog-bundle": "~2.4",
-        "sensio/distribution-bundle": "~2.3",
-        "sensio/framework-extra-bundle": "~3.0",
-        "incenteev/composer-parameter-handler": "~2.0",
-        "symfony/icu": "1.1"
+        "php"                                   : ">=5.3.3",
+        "symfony/symfony"                       : "~2.6",
+        "doctrine/orm"                          : "~2.2,>=2.2.3",
+        "doctrine/doctrine-bundle"              : "~1.2",
+        "twig/extensions"                       : "~1.0",
+        "symfony/assetic-bundle"                : "~2.3",
+        "symfony/swiftmailer-bundle"            : "~2.3",
+        "symfony/monolog-bundle"                : "~2.4",
+        "sensio/distribution-bundle"            : "~2.3",
+        "sensio/framework-extra-bundle"         : "~3.0",
+        "incenteev/composer-parameter-handler"  : "~2.0"
     },
     "scripts": {
         "post-install-cmd": [
@@ -44,7 +43,7 @@
             "file": "app/config/parameters.yml"
         },
         "branch-alias": {
-            "dev-master": "2.4-dev"
+            "dev-master": "2.6-dev"
         }
     }
 }
