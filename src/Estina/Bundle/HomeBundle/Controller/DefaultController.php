@@ -18,7 +18,7 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/", name="home")
-     * @method({"GET"})
+     * @Method({"GET"})
      * @Template()
      */
     public function indexAction()
@@ -32,7 +32,7 @@ class DefaultController extends Controller
      * @param Request $request 
      *
      * @Route("/register", name="register")
-     * @method({"POST"})
+     * @Method({"POST"})
      * @Template()
      */
     public function registerAction()
