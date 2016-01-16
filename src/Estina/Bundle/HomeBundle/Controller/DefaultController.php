@@ -18,6 +18,7 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/", name="home")
+     * @method({"GET"})
      * @Template()
      */
     public function indexAction()
@@ -31,7 +32,7 @@ class DefaultController extends Controller
      * @param Request $request 
      *
      * @Route("/register", name="register")
-     * @Method({"POST"})
+     * @method({"POST"})
      * @Template()
      */
     public function registerAction()
@@ -76,11 +77,11 @@ class DefaultController extends Controller
     }
 
     /**
-     * Mentors block 
+     * Speakers block
      * 
      * @Template()
      */
-    public function mentorsAction()
+    public function speakersAction()
     {
         return [];
     }
