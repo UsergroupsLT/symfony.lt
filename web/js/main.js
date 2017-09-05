@@ -2,8 +2,8 @@
     "use strict";
 
     ///////////////////////////////////////////////////// Your
-    var coordinates = [54.7107699,25.2940479];
-    var venueAddress = "Šiaurės Miestelio Technologijų Parkas,<br />J. Galvydžio g. 5, Vilnius ("
+    var coordinates = [54.6975772,25.3098426];
+    var venueAddress = "Sapiegos Bistro, Vilnius Tech Park,<br />Antakalnio 17, Vilnius ("
         + coordinates[0] + ', ' + coordinates[1] + ")"; // Venue
     /////////////////////////////////////////////////// Adress
 
